@@ -42,4 +42,10 @@ public class UserController {
         user.persist();
         return Response.ok("Usuario restaurado correctamente").build();
     }
+
+    @GET
+    @Path("/health")
+    public Response healthCheck() {
+        return Response.ok("Service is up and running").build();
+    }
 }
